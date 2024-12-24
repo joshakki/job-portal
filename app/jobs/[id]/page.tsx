@@ -4,6 +4,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation'; // Correct import for App Router
 
+import '../../../styles/global.css';
+
 interface Job {
   title: string;
   description: string;

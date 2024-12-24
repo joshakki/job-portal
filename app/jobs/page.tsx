@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import JobCard from '../../components/JobCard';
+import '../../styles/global.css';
 
 interface Job {
   _id: string; // Ensure id is part of the Job interface

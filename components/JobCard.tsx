@@ -4,6 +4,8 @@
 import React from 'react';
 import Link from 'next/link';
 
+import '../styles/global.css';
+
 interface JobCardProps {
   id: string; // Add an id prop for the job
   title: string;
