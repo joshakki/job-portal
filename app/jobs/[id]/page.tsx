@@ -48,7 +48,7 @@ export default function JobDetails() {
       <p><strong>Company ID:</strong> {job.companyId}</p>
       <p><strong>Location:</strong> {job.location}</p>
       <p><strong>Skills Required:</strong> {job.skillsRequired.join(', ')}</p>
-      <p><strong>Salary Range:</strong> ${job.salaryRange.min} - ${job.salaryRange.max}</p>
+     {job.salaryRange && job.salaryRange.min != null && job.salaryRange != null &&  <p><strong>Salary Range:</strong> ${job.salaryRange.min} - ${job.salaryRange.max}</p>}
     </div>
   );
 }

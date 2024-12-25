@@ -36,7 +36,8 @@ const JobCard: React.FC<JobCardProps> = ({
         <p><strong>Company ID:</strong> {companyId}</p>
         <div className="location-salary">
           <p><span className="label">Location:</span> {location}</p>
-          <p><span className="label">Salary:</span> ${salaryRange.min} - ${salaryRange.max}</p>
+          {salaryRange && salaryRange.min != null && salaryRange.max != null &&
+          <p><span className="label">Salary:</span> ${salaryRange.min} - ${salaryRange.max}</p> }
         </div>
         <p><strong>Skills Required:</strong> {skillsRequired.join(', ')}</p>
       </div>
