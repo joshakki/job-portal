@@ -17,7 +17,6 @@ interface JobCardProps {
     min: number;
     max: number;
   };
-  workMode:string;
 }
 
 const JobCard: React.FC<JobCardProps> = ({
