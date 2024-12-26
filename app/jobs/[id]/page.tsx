@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation'; // Correct import for App Router
 
 import '../../jobs/[id]/page_id.css';
+import Link from 'next/link';
 
 interface Job {
   title: string;
@@ -43,9 +44,9 @@ export default function JobDetails() {
 
   return (
   <div>
-    <div className='header'><a href="/jobs">
+    <div className='header'><Link href="/jobs">
     <p className='homepara'>Home</p>
-    </a>
+    </Link>
     <p className='signin'>Sign in</p>
     
     </div>        
