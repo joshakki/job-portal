@@ -26,7 +26,7 @@ export default function JobDetails() {
   useEffect(() => {
     if (id) {
       const fetchJobDetails = async () => {
-        const response = await fetch(`http://localhost:3000/jobs/${id}`); // Fetch job details using the ID
+        const response = await fetch(`http://64.227.158.236:3000/jobs/${id}`); // Fetch job details using the ID
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

@@ -23,7 +23,7 @@ export default function Jobs() {
   
   useEffect(() => {
     const fetchJobs = async () => {
-      const response = await fetch('http://localhost:3000/jobs');
+      const response = await fetch('http://64.227.158.236:3000/jobs');
       const data = await response.json();
       setJobs(data);
     };
