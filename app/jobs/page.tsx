@@ -33,7 +33,7 @@ export default function Jobs() {
 
   return (
     <div className="jobs-container">
-      <h1 className="page-title">Job Listings</h1>
+      <div className='title'><h1 className="page-title">Job Openings</h1></div>
       {jobs.length === 0 ? (
         <p>No jobs available at the moment.</p>
       ) : (

@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation'; // Correct import for App Router
 
-import '../../../styles/global.css';
+import '../../jobs/[id]/page_id.css';
 
 interface Job {
   title: string;
@@ -42,13 +42,23 @@ export default function JobDetails() {
   if (!job) return <p>Loading...</p>; // Loading state
 
   return (
+  <div>
+    <div className='header'><a href="/jobs">
+    <p className='homepara'>Home</p>
+    </a>
+    <p className='signin'>Sign in</p>
+    
+    </div>        
     <div className="job-details-container">
-      <h1>{job.title}</h1>
+      <div className='title_heading'>
+        <h1>{job.title}</h1>
+      </div>
       <p>{job.description}</p>
       <p><strong>Company ID:</strong> {job.companyId}</p>
       <p><strong>Location:</strong> {job.location}</p>
       <p><strong>Skills Required:</strong> {job.skillsRequired.join(', ')}</p>
-     {job.salaryRange && job.salaryRange.min != null && job.salaryRange != null &&  <p><strong>Salary Range:</strong> ${job.salaryRange.min} - ${job.salaryRange.max}</p>}
+    {job.salaryRange && job.salaryRange.min != null && job.salaryRange != null &&  <p><strong>Salary Range:</strong> ${job.salaryRange.min} - ${job.salaryRange.max}</p>}
     </div>
-  );
+  </div> 
+ );
 }
