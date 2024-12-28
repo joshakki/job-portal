@@ -21,7 +21,6 @@ interface Job {
 
 export default function Jobs() {
   const [jobs, setJobs] = useState<Job[]>([]);
-  console.log("print valueeeee " + (process.env.NEXT_PUBLIC_API_URL));
   
   useEffect(() => {
     const fetchJobs = async () => {
