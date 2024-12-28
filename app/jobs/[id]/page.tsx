@@ -26,7 +26,7 @@ export default function JobDetails() {
   useEffect(() => {
     if (id) {
       const fetchJobDetails = async () => {
-        const response = await fetch(`https://jobs.remotefresh.work/jobs/${id}`); // Fetch job details using the ID
+        const response = await fetch(process.env.NEXT_PUBLIC_API_URL + `${id}`); // Fetch job details using the ID
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

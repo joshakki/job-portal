@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'react';
 import JobCard from '../../components/JobCard';
 import '../../styles/global.css';
+import { Console } from 'console';
 
 interface Job {
   _id: string; // Ensure id is part of the Job interface
@@ -20,10 +21,11 @@ interface Job {
 
 export default function Jobs() {
   const [jobs, setJobs] = useState<Job[]>([]);
+  console.log("print valueeeee " + (process.env.NEXT_PUBLIC_API_URL));
   
   useEffect(() => {
     const fetchJobs = async () => {
-      const response = await fetch('https://jobs.remotefresh.work/jobs');
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL);
       const data = await response.json();
       setJobs(data);
     };
