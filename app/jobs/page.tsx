@@ -27,7 +27,7 @@ export default function Jobs() {
       const data = await response.json();
       setJobs(data);
     };
-    
+  
     fetchJobs();
   }, []);
 
