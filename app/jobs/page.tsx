@@ -23,7 +23,7 @@ export default function Jobs() {
   
   useEffect(() => {
     const fetchJobs = async () => {
-      const response = await fetch(process.env.NEXT_PUBLIC_API_URL);
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL as string);
       const data = await response.json();
       setJobs(data);
     };
