@@ -23,11 +23,11 @@ export default function Jobs() {
   
   useEffect(() => {
     const fetchJobs = async () => {
-      const response = await fetch('https://jobs.remotefresh.work/jobs');
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL as string);
       const data = await response.json();
       setJobs(data);
     };
-    
+  
     fetchJobs();
   }, []);
 
