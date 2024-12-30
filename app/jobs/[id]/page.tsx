@@ -12,6 +12,9 @@ interface Job {
   description: string;
   location: string;
   skillsRequired: string[];
+  qualifications: string[];
+  responsibilities: string[];
+  benefits: string[];
   salaryRange: {
     min: number;
     max: number;
@@ -122,6 +125,9 @@ export default function JobDetails() {
         <p>{job.description}</p>
         <p><strong>Location:</strong> {job.location}</p>
         <p><strong>Skills Required:</strong> {job.skillsRequired.join(', ')}</p>
+        <p><strong>Qualifications:</strong> {job.qualifications.join(', ')}</p>
+        <p><strong>Responsibilites:</strong> {job.responsibilities.join(', ')}</p>
+        <p><strong>Benefits:</strong> {job.benefits.join(', ')}</p>
         {job.salaryRange && job.salaryRange.min != null && job.salaryRange.max != null && (
           <p><strong>Salary Range:</strong> ${job.salaryRange.min} - ${job.salaryRange.max}</p>
         )}
