@@ -2,7 +2,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation'; // Correct import for App Router
+import { useParams, useRouter } from 'next/navigation'; // Correct import for App Router
 
 import '../../jobs/[id]/page_id.css';
 import Link from 'next/link';
@@ -20,6 +20,7 @@ interface Job {
 
 export default function JobDetails() {
   const { id } = useParams(); // Get the job ID from the URL parameters
+  const router = useRouter();
   const [job, setJob] = useState<Job | null>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -73,6 +74,17 @@ export default function JobDetails() {
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
+      }
+      else {
+        // Clear the form fields
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+        });
+
+        // Navigate to success page
+        router.push('/success');
       }
 
      
@@ -131,7 +143,7 @@ export default function JobDetails() {
             <label htmlFor="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
           </div>
-          <Link href="/success"><button type="submit">Submit Application</button></Link>
+          <button type="submit">Submit Application</button>
         </form>
       </div>
 
