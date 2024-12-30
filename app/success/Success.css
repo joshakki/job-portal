@@ -1,0 +1,62 @@
+/* Success.module.css */
+body {
+    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgb(128, 202, 252), rgb(194, 255, 25)); /* Modern gradient background */
+    color: #333; /* Dark text for readability */
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.tickContainer {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.tick {
+    width: 50px;
+    height: 50px;
+    stroke: #4caf50; /* Green color */
+    stroke-width: 2;
+    fill: none;
+    animation: draw 0.5s ease forwards, scale 0.5s ease forwards, repeatAnimation 1s ease infinite; /* Repeat animation */
+}
+
+@keyframes draw {
+    from {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes repeatAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly increase size at midpoint */
+    }
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+}
+

@@ -4,25 +4,31 @@ body {
     font-family: 'Arial', sans-serif; /* Clean sans-serif font */
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg,  rgb(128, 202, 252),rgb(194, 255, 25)); /* Modern gradient background */
+    background: linear-gradient(135deg, rgb(128, 202, 252), rgb(194, 255, 25)); /* Modern gradient background */
     color: #333; /* Dark text for readability */
 }
 
 .jobs-container {
-    max-width: 900px; /* Wider container for better readability */
-    margin: auto; /* Center the container */
-    padding: 10px 20px ; /* Add padding */
+    margin-top: 20px; /* Top margin */
+    margin-left: auto; /* Automatic left margin */
+    margin-right: auto; /* Automatic right margin */
+    width: 80%;
+    padding: 20px; /* Add padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 15px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .page-title {
     display: block;
-    background-color: #89d1dc;
+    background-color: #89d1dc; /* Soft blue background */
     text-align: center; /* Center the title */
     font-size: 2.5rem; /* Larger font size for emphasis */
     margin-bottom: 30px; /* Space below the title */
     color: #2c3e50; /* Darker color for the title */
+    padding: 15px; /* Padding around the title */
+    border-radius: 10px; /* Rounded corners for the title background */
 }
-
 
 .job-list {
     display: flex; /* Use flexbox for layout */
@@ -31,7 +37,7 @@ body {
 }
 
 .job-card {
-    background-color: rgb(179, 165, 255); /* White background for cards */
+    background-color: #f9f9f9; /* Light gray background for cards */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
     padding: 20px; /* Inner padding */
@@ -46,6 +52,7 @@ body {
 .job-title {
     font-size: 1.8rem; /* Title size */
     margin-bottom: 10px; /* Space below title */
+    color: #2980b9; /* Highlight color for job titles */
 }
 
 .job-description {
@@ -61,7 +68,6 @@ body {
     justify-content: space-between; 
 }
 
-/* Label styles for better distinction */
 .label {
     font-weight: bold;
 }
@@ -69,10 +75,16 @@ body {
 /* Responsive design adjustments */
 @media (max-width: 600px) {
     .jobs-container {
-        padding: 10px; /* Less padding on small screens */
+        padding: 15px; /* Less padding on small screens */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px; /* Adjust border radius on smaller screens */
+        box-shadow: none; /* Remove shadow on smaller screens for simplicity */
     }
 
     .page-title {
         font-size: 1.8rem; /* Smaller title on small screens */
+        padding: 10px; /* Less padding on smaller screens */
+        border-radius: 8px; /* Adjust border radius on smaller screens */
     }
 }

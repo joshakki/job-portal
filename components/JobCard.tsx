@@ -10,7 +10,6 @@ interface JobCardProps {
   id: string; // Add an id prop for the job
   title: string;
   description: string;
-  companyId: string;
   location: string;
   skillsRequired: string[];
   salaryRange: {
@@ -23,7 +22,6 @@ const JobCard: React.FC<JobCardProps> = ({
   id,
   title,
   description,
-  companyId,
   location,
   skillsRequired,
   salaryRange,
@@ -33,7 +31,6 @@ const JobCard: React.FC<JobCardProps> = ({
       <h2 className="job-title">{title}</h2>
       <p className="job-description">{description}</p>
       <div className="job-details">
-        <p><strong>Company ID:</strong> {companyId}</p>
         <div className="location-salary">
           <p><span className="label">Location:</span> {location}</p>
           {salaryRange && salaryRange.min != null && salaryRange.max != null &&

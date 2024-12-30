@@ -1,54 +1,144 @@
+/* General Styles */
 body {
-    background-color: rgba(160, 159, 105, 0.644);
-    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgb(128, 202, 252), rgb(194, 255, 25));
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0070f3, #005bb5); /* Smooth gradient */
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.homepara {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.signin {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Job Details Container */
+.job-details-container {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a floating effect */
+    max-width: 700px; /* Slightly wider container */
+    border-top: 5px solid #0070f3; /* Stylish border on top */
+}
+
+/* Job Title */
+.title_heading h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Job Description */
+.job-details-container p {
+    font-size: 16px;
+    line-height: 1.7; /* Slightly more space for readability */
+    color: #555; /* Softer text color */
+    margin-bottom: 20px;
+}
+
+/* Salary Range */
+.job-details-container strong {
+    color: #333; /* Darker color for emphasis */
+    font-weight: 700;
+}
+
+/* Form Styles */
+.form {
+    margin-top: 30px; /* More space above the form */
+    width: 80%;
     margin: auto;
 
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #a9bb79dc;    
-    font-weight: bold;
+.form h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
 
 }
-.homepara{
-    color: rgb(0, 0, 0);
-    text-align: left;
-    font-size: 20px;
-    margin-left: 10px;
-    ;
-}
-.signin{
-    color: rgb(0, 0, 0);
-    text-align: right;
-    font-size: 20px;
-    margin-right: 10px;
-}
-.job-details-container {
-    width: 80%;
-    background-color: #e2c4ff;
-    padding: 10px;
-    margin: 40px auto;
-    border-radius: 20px;  
 
+.form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
 
+.form input,
+.form textarea {
+    width: 100%; /* Full width for both input and textarea */
+    padding: 12px; /* More padding for better touch targets */
+    border-radius: 8px; /* More rounded corners */
+    border: 1px solid #ccc;
+    margin-bottom: 15px; /* Increased space between fields */
+    background-color: #f9f9f9; /* Light background for input */
+    font-size: 16px;
+    color: #555;
 }
-.title_heading {
-    display: flex;
-    justify-content: center;
-    width: 500px;
-    height: auto;      
-    font-style: normal;
-    margin : 20px auto;
-    padding: 10px 20px;
-    border-radius: 5px;  
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #0070f3; /* Focus effect */
+    outline: none;
+    background-color: #fff; /* Clean white background on focus */
 }
-h1 {
-    text-decoration: solid;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    
+
+.form button {
+    background-color: #0070f3;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.form button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.form button:active {
+    transform: translateY(1px); /* Subtle press effect */
+}
+
+/* Success Message */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #c3e6cb;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.success-message p {
+    margin: 0;
 }

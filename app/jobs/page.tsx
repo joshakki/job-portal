@@ -6,10 +6,9 @@ import JobCard from '../../components/JobCard';
 import '../../styles/global.css';
 
 interface Job {
-  _id: string; // Ensure id is part of the Job interface
+  _id: string;
   title: string;
   description: string;
-  companyId: string;
   location: string;
   skillsRequired: string[];
   salaryRange: {
@@ -20,31 +19,32 @@ interface Job {
 
 export default function Jobs() {
   const [jobs, setJobs] = useState<Job[]>([]);
-  
+
   useEffect(() => {
     const fetchJobs = async () => {
       const response = await fetch(process.env.NEXT_PUBLIC_API_URL as string);
       const data = await response.json();
       setJobs(data);
     };
-  
+
     fetchJobs();
   }, []);
 
   return (
     <div className="jobs-container">
-      <div className='title'><h1 className="page-title">Job Openings</h1></div>
+      <div className='title'>
+        <h1 className="page-title">Remote Jobs for Freshers</h1>
+      </div>
       {jobs.length === 0 ? (
         <p>No jobs available at the moment.</p>
       ) : (
         <div className="job-list">
           {jobs.map(job => (
             <JobCard 
-              key={job._id} // Use unique ID as key
+              key={job._id}
               id={job._id}
               title={job.title}
               description={job.description}
-              companyId={job.companyId}
               location={job.location}
               skillsRequired={job.skillsRequired}
               salaryRange={job.salaryRange} 
