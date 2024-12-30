@@ -26,7 +26,7 @@ export default function JobDetails() {
     email: '',
     phone: '',
   });
-  const [successMessage, setSuccessMessage] = useState(''); // State for success message
+  
 
   useEffect(() => {
     if (id) {
@@ -75,9 +75,7 @@ export default function JobDetails() {
         throw new Error('Network response was not ok');
       }
 
-      // Set success message
-      setSuccessMessage('Application submitted successfully!');
-
+     
       // Clear the form fields by resetting formData to its initial state
       setFormData({
         name: '',
@@ -87,7 +85,7 @@ export default function JobDetails() {
 
       // Optionally, clear the success message after a few seconds
       setTimeout(() => {
-        setSuccessMessage('');
+      
       }, 3000); // Clear message after 3 seconds
 
     } catch (error) {
@@ -120,12 +118,6 @@ export default function JobDetails() {
       {/* Form Section */}
       <div className='form'>
         <h2>Apply for this Job</h2>
-
-        {/* Display success message as a popup */}
-        {successMessage && (
-          <div className="success-message">{successMessage}</div>
-        )}
-
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>
@@ -139,7 +131,7 @@ export default function JobDetails() {
             <label htmlFor="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
           </div>
-          <button type="submit">Submit Application</button>
+          <Link href="/success"><button type="submit">Submit Application</button></Link>
         </form>
       </div>
 

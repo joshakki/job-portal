@@ -9,8 +9,10 @@ body {
 }
 
 .jobs-container {
-    max-width: 900px; /* Wider container for better readability */
-    margin: auto; /* Center the container */
+    margin-top: 20px; /* Top margin */
+    margin-left: auto; /* Automatic left margin */
+    margin-right: auto; /* Automatic right margin */
+    width: 80%;
     padding: 20px; /* Add padding for better spacing */
     background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
     border-radius: 15px; /* Rounded corners for the container */
