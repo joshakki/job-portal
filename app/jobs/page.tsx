@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import JobCard from '../../components/JobCard';
 //import Head from 'next/head'; // Import Head component
 import '../../styles/global.css';
-import type { Metadata } from "next";
+//import type { Metadata } from "next";
 
 interface Job {
   _id: string;
