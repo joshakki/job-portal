@@ -129,7 +129,7 @@ export default function JobDetails() {
         <p><strong>Responsibilites:</strong> {job.responsibilities.join(', ')}</p>
         <p><strong>Benefits:</strong> {job.benefits.join(', ')}</p>
         {job.salaryRange && job.salaryRange.min != null && job.salaryRange.max != null && (
-          <p><strong>Salary Range:</strong> ${job.salaryRange.min} - ${job.salaryRange.max}</p>
+          <p><strong>Salary Range:</strong> Rs.{job.salaryRange.min} - Rs.{job.salaryRange.max}</p>
         )}
       </div>
 
